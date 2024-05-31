@@ -23,7 +23,8 @@ include 'sinces.php'
         <style>
             body{
                 height: 100vh;  
-                background-color: #429eb5;
+                background-color: #549eb5;
+                font-family: cursive;
             }
             h3{
                 font-size: 50px;
@@ -35,7 +36,7 @@ include 'sinces.php'
     </head>
 
     <body class="d-flex justify-center">
-        <header class="m-auto text-center">
+        <header class=" m-auto text-center">
             <h3>
                 Esta função foi criada há
             </h3>

@@ -3,6 +3,11 @@ include '../config.php';
 
 function sinces(string $date) : string
 {
+    // Função que diz quanto tempo se passou;
+    // Argumento $date(str): data referencial
+    // 
+    // A função ira retornar quanto tempo se passou da data passada até o momento em que está sendo executado
+    // 
     $nowT = time();
     $whenT = strtotime($date);
 
@@ -15,7 +20,10 @@ function sinces(string $date) : string
     
 
     $since = $nowT-$whenT;
-    if ($since < 60*2)
+    if ($since < 0)
+    {
+        return 'Em breve...';
+    }if ($since < 60*2)
     {
         return 'Agora mesmo';
     }if ($since < 60**2)
@@ -41,10 +49,10 @@ function sinces(string $date) : string
         return floor($since/(60**2*24*7))." semanas.";
     }if ($since < (60**2*24*7*4)*2)
     {
-        return floor($since/(60**2*24*7*4))." mês.";
+        return $intervalo->m." mês.";
     }if ($since < (60**2*24*7*4*12))
     {
-        return floor($since/(60**2*24*7*4))." meses.";
+        return $intervalo->m." meses.";
     }if ($intervalo->y == 1)
     {
         return "Esta função foi criada há<br>1 ano.";
