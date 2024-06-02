@@ -1,11 +1,13 @@
-<?php
-include 'script.php'
-?>
+<?php 
+include 'script.php';
+$entrada = 'AA-aaaaaaa$'
 
+
+?>
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Sinces</title>
+        <title>Validator</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -20,31 +22,26 @@ include 'script.php'
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <style>
-            body{
-                height: 100vh;  
-                background-color: #549eb5;
-                font-family: cursive;
-            }
-            h3{
-                font-size: 50px;
-            }
-            h1{
-                font-size: 150px;
-            }
-        </style>
     </head>
 
-    <body class="d-flex justify-center">
-        <header class=" m-auto text-center">
-            <h3>
-                Esta função foi criada há
-            </h3>
-            <h1>
-                <?php 
-                echo sinces("31 May 2024 00:00:00");
-                ?>
-            </h1>
+    <body>
+        <header>
+           entrada:
+           <h1>
+                <ul>
+                    <?php 
+                        echo var_dump($entrada)
+                    ?>
+                </ul>
+           </h1>
+           <hr>
+           saída:
+           <h1>
+            <?php 
+                echo vals($entrada,'password')
+            ?>
+
+           </h1>
         </header>
         <main></main>
         <footer>
