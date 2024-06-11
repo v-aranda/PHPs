@@ -1,0 +1,22 @@
+body,section,main{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    box-sizing: border-box;
+}
+header{
+    height: 10%;
+}
+.bg1{
+    background-color: aqua;
+}.bg2{
+    background-color: rgb(77, 255, 0);
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90%;
+}
+
